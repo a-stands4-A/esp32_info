@@ -1,0 +1,6 @@
+1. [SoC - мозги и сердце IoT](esp32_info.md#soc------iot)
+2. [ESP - аналог Arduino, Raspberry Pico](esp32_info.md#esp----arduino-raspberry-pico)
+3. [Плата разработчика (отладочная плата) (devkit)](esp32_info.md#----devkit)
+4. [Товарный ряд ESP](esp32_info.md#--esphttpswwwespressifcomenproductssocs)
+5. [RISC-V](esp32_info.md#risc-v)
+6. [Важные параметры для выбора SoC](esp32_info.md#----soc)
