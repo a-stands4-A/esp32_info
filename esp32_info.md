@@ -94,14 +94,25 @@ ESP - аналог Arduino, Raspberry Pico
 [Товарный ряд ESP](https://www.espressif.com/en/products/socs)
 -
 
-| SoC Series | RISC-V |              Core              | Bits | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     | Zigbee |                           Additional                           |
-|:----------:|:------:|:------------------------------:|:----:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------:|:--------------------------------------------------------------:|
-|     S3     | False  |  Xtensa® 32-bit LX7 Dual-core  |  32  |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) | False  | Vector instructions, <br/>connection to flash and external RAM |
-|     S2     | False  | Xtensa® 32-bit LX7 Single-Core |  32  |   up to 240    |   320    |   128   | 2.4 GHz |      False       | False  |                  Ultra-low-power performance                   |
-|     C6     |  True  |   Single-core microprocessor   |  32  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |  True  |                   Works with external flash                    |
-|     C3     |  True  |   Single-core microprocessor   |  32  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) | False  |                   Allow connection to flash                    |
-|     C2     |  True  |   Single-core microprocessor   |  32  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) | False  |                      16 KB for cache SRAM                      |
-|     H2     |  True  |   Single-core microprocessor   |  32  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) |  True  |                         4 KB LP Memory                         |
+[<u>[Info ESP32 Series]</u>](https://kotyara12.ru/iot/esp32_chips/)
+&nbsp;
+[<u>[ESP32 SoCs]</u>](https://www.espressif.com/en/products/socs)
+&nbsp;
+[<u>[ESP32 Series]</u>](https://www.espressif.com/en/products/socs/esp32)
+&nbsp;
+[<u>[Modules]</u>](https://www.espressif.com/en/products/modules)
+
+
+| EPS32<br/> Series | RISC-V |                 Core                 | Bits | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     |       Zigbee       |                           Additional                           |
+|:-----------------:|:------:|:------------------------------------:|:----:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------------------:|:--------------------------------------------------------------:|
+|       EPS32       | False  | Xtensa® dual-/single core 32-bit LX6 |  32  |   up to 240    |   520    |   448   | 2.4 GHz |  Bluetooth v4.2  |       False        |                      Много разных модулей                      |
+|        S3         | False  |     Xtensa® 32-bit LX7 Dual-core     |  32  |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        | Vector instructions, <br/>connection to flash and external RAM |
+|        S2         | False  |    Xtensa® 32-bit LX7 Single-Core    |  32  |   up to 240    |   320    |   128   | 2.4 GHz |      False       |       False        |                  Ultra-low-power performance                   |
+|        C6         |  True  |      Single-core microprocessor      |  32  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |        True        |                   Works with external flash                    |
+|        C3         |  True  |      Single-core microprocessor      |  32  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                   Allow connection to flash                    |
+|        C2         |  True  |      Single-core microprocessor      |  32  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                      16 KB for cache SRAM                      |
+|        H2         |  True  |      Single-core microprocessor      |  32  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) | True +<br/> Thread |                         4 KB LP Memory                         |
+
 ---
 RISC-V 
 -
@@ -121,7 +132,6 @@ RISC-V - команды проще, короче, быстрее в выполн
 -
 
 
-   
 
 ---
 
