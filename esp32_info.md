@@ -25,10 +25,10 @@ SoC - это CPU с "обвесами". Помимо вычислительно�
 
 ESP - аналог Arduino, Raspberry Pico
 -
-[params](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/hw-reference/chip-series-comparison.html)
-[2](https://narodstream.ru/esp32-urok-36-rmt-rabota-s-ik-pultom/)
+[<u>params by docs</u>](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/hw-reference/chip-series-comparison.html)
+&nbsp;
 
-Для начала определим, о чем именно говорится в datasheet`ах:
+Для начала определим, о чем именно говорится в datasheet:
 
 |                     Param                      |                                 Description                                  |
 |:----------------------------------------------:|:----------------------------------------------------------------------------:|
@@ -80,7 +80,7 @@ ESP - аналог Arduino, Raspberry Pico
 Плата разработчика (отладочная плата) (devkit)
 -
 Вычислительный блок (микросхема) с "обвесами" устанавливается на миниатюрную печатную плату => получается SoC (модуль).
-Модуль (SoC) паяется к печатной плате, позволяющей использовать возможности SoC => Готовый devkit.
+Модуль (SoC) паяется к печатной плате, позволяющей использовать возможности SoC => Готовый devkit (печатная плата с выводами и SoC).
 
 [Состав платы разработчика ESP32](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32/hw-reference/esp32/get-started-devkitc.html):
 - SoC (с распаянной PCB-антенной WiFi/Bluetooth или без);
@@ -90,28 +90,55 @@ ESP - аналог Arduino, Raspberry Pico
 - Кнопки сброса (Reset) и кнопка режима загрузки прошивки (Boot);
 - [Порт `USB Micro-B` или `USB Type-С`;](https://webznam.ru/blog/porty_usb_razlichnykh_tipov/2022-10-29-2174)
 - Выводы (пины) для подключения периферии, датчиков.
+
 ---
-[Товарный ряд ESP](https://www.espressif.com/en/products/socs)
+
+Номенклатура Esp32 modules
+-
+
+[ESP32] [CORE] [FLASH] [CONNECTION] [PSRAM] [TEMPERATURE] [Package] [revision]
+
+**[`Core`]** = [`D/U`] - dual core; [`S`] - single core
+
+**[In-package `flash`]** = [`0`] - no in-package flash; [`2`] - 2 MB flash; [`4`] - 4 MB flash
+
+**[`Connection`]** = [`WD`] - Wi-Fi b/g/n + Bluetooth/Bluetooth LE dual mode
+
+**[In-package `PSRAM`]** = [`R2`] - 2 MB PSRAM
+
+**[High `temperature`]** = [`H`]
+
+**[`Package`]** = [`Q6`] - QFN 6 * 6; [`N/A`] - QFN 5 * 5
+
+**[Chip `revision`]** = [`V3.0 or newer`]
+
+---
+[Товарный ряд ESP <a href="#sell" id="sellRef"><sup>1</sup></a><a href="#how" id="howRef"><sup> <u>0</u></sup></a>](https://www.espressif.com/en/products/socs)
 -
 
 [<u>[Info ESP32 Series]</u>](https://kotyara12.ru/iot/esp32_chips/)
 &nbsp;
-[<u>[ESP32 SoCs]</u>](https://www.espressif.com/en/products/socs)
+[<u>[ESP32 Modules]</u>](https://www.espressif.com/en/products/modules)
 &nbsp;
-[<u>[ESP32 Series]</u>](https://www.espressif.com/en/products/socs/esp32)
-&nbsp;
-[<u>[Modules]</u>](https://www.espressif.com/en/products/modules)
+[<u>[Help select]</u>](https://products.espressif.com/#/product-selector?language=en)
 
+<br/>
 
-| EPS32<br/> Series | RISC-V |                 Core                 | Bits | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     |       Zigbee       |                           Additional                           |
-|:-----------------:|:------:|:------------------------------------:|:----:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------------------:|:--------------------------------------------------------------:|
-|       EPS32       | False  | Xtensa® dual-/single core 32-bit LX6 |  32  |   up to 240    |   520    |   448   | 2.4 GHz |  Bluetooth v4.2  |       False        |                      Много разных модулей                      |
-|        S3         | False  |     Xtensa® 32-bit LX7 Dual-core     |  32  |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        | Vector instructions, <br/>connection to flash and external RAM |
-|        S2         | False  |    Xtensa® 32-bit LX7 Single-Core    |  32  |   up to 240    |   320    |   128   | 2.4 GHz |      False       |       False        |                  Ultra-low-power performance                   |
-|        C6         |  True  |      Single-core microprocessor      |  32  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |        True        |                   Works with external flash                    |
-|        C3         |  True  |      Single-core microprocessor      |  32  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                   Allow connection to flash                    |
-|        C2         |  True  |      Single-core microprocessor      |  32  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                      16 KB for cache SRAM                      |
-|        H2         |  True  |      Single-core microprocessor      |  32  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) | True +<br/> Thread |                         4 KB LP Memory                         |
+| EPS32<br/> Series |                                                                                                  Datasheet                                                                                                   |                                  Current Consumption <a href="#noteDS" id="noteDSRef"><sup>2</sup></a>                                  | RISC-V |                Core                 | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     |       Zigbee       |                           Additional                           |
+|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|:------:|:-----------------------------------:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------------------:|:--------------------------------------------------------------:|
+|       EPS32       |                                                     [тык `Series`](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf")                                                      |                                    [Series: page 29](./datasheets/esp32_datasheet_en.pdf "page 29")                                     | False  | Xtensa® 32-bit LX6 dual/single core |   up to 240    |   520    |   448   | 2.4 GHz |  Bluetooth v4.2  |       False        |                      Много разных модулей                      |
+|        S3         |                                                      [тык `S3`](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)                                                       |                                     [S3: page 59](./datasheets/esp32-s3_datasheet_en.pdf "page 59")                                     | False  |    Xtensa® 32-bit LX7 Dual-core     |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        | Vector instructions, <br/>connection to flash and external RAM |
+|        S2         |                                                      [тык `S2`](https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf)                                                       |                                     [S2: page 39](./datasheets/esp32-s2_datasheet_en.pdf "page 39")                                     | False  |   Xtensa® 32-bit LX7 Single-Core    |   up to 240    |   320    |   128   | 2.4 GHz |      False       |       False        |                  Ultra-low-power performance                   |
+|        C6         |                                                      [тык `C6`](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)                                                       |                                     [C6: page 57](./datasheets/esp32-c6_datasheet_en.pdf "page 57")                                     |  True  |  32-bit single-core microprocessor  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |        True        |                   Works with external flash                    |
+|  C3 (+ ESP8685)   | [тык `C3`](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)<br/> [тык `ESP8685`](https://www.espressif.com/sites/default/files/documentation/esp8685_datasheet_en.pdf) | [C3: page 47](./datasheets/esp32-c3_datasheet_en.pdf "page 47")<br/>[ESP8685: page 40](./datasheets/esp8685_datasheet_en.pdf "page 40") |  True  |  32-bit single-core microprocessor  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                   Allow connection to flash                    |
+| C2 (aka ESP8684)  |                                                    [тык `ESP8684`](https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf)                                                     |                                     [C2: page 27](./datasheets/esp8684_datasheet_en.pdf "page 27")                                      |  True  |  32-bit single-core microprocessor  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                      16 KB for cache SRAM                      |
+|        H2         |                                                      [тык `H2`](https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf)                                                       |                                     [H2: page 33](./datasheets/esp32-h2_datasheet_en.pdf "page 33")                                     |  True  |  32-bit single-core microprocessor  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) | True +<br/> Thread |                         4 KB LP Memory                         |
+
+<a id="how" href="#howRef"><sup><u>0</u></sup></a> [Helped by Benjamin Loison](https://translated.turbopages.org/proxy_u/en-ru.ru.78954326-66106b9c-92c2ed9b-74722d776562/https/stackoverflow.com/questions/25579868/how-to-add-footnotes-to-github-flavoured-markdown?__ya_mt_enable_static_translations=1)
+
+<a id="sell" href="#sellRef"><sup>1</sup></a> Basic ESP32 (ESP32-WROOM) + QSPI PSRAM (need additional code) = ESP32-WROVER (pumped-up ESP32-WROOM)
+
+<a id="noteDS" href="#noteDSRef"><sup>2</sup></a> Datasheet`ы взяты с инета, для подстраховки загружены PDF файлы с указанием страницы
 
 ---
 RISC-V 
@@ -123,7 +150,7 @@ RISC-V
 &nbsp;
 [3](https://tproger.ru/articles/processors-architectures-review)
 
-Архитектура (микро-)процессора - или набор команд для работы над битами или подходы к физической реализации данного набора (как именно гоняют электроны в ячейках памяти (регистрах)).
+<u>_Архитектура (микро-)процессора</u>_ - или набор команд для работы над битами или подходы к физической реализации данного набора (как именно гоняют электроны в ячейках памяти (регистрах)).
 
 RISC-V - команды проще, короче, быстрее в выполнении, но их относительно мало и они не оптимизированы под конкретные задачи, особенности физической реализации.
 
