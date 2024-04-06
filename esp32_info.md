@@ -113,7 +113,7 @@ ESP - аналог Arduino, Raspberry Pico
 **[Chip `revision`]** = [`V3.0 or newer`]
 
 ---
-[Товарный ряд ESP <a href="#sell" id="sellRef"><sup>1</sup></a><a href="#how" id="howRef"><sup> <u>0</u></sup></a>](https://www.espressif.com/en/products/socs)
+[Товарный ряд ESP modules<a href="#sell" id="sellRef"><sup>1</sup></a><a href="#how" id="howRef"><sup> <u>0</u></sup></a>](https://www.espressif.com/en/products/socs)
 -
 
 [<u>[Info ESP32 Series]</u>](https://kotyara12.ru/iot/esp32_chips/)
@@ -124,15 +124,15 @@ ESP - аналог Arduino, Raspberry Pico
 
 <br/>
 
-| EPS32<br/> Series |                                                                                                  Datasheet                                                                                                   |                                  Current Consumption <a href="#noteDS" id="noteDSRef"><sup>2</sup></a>                                  | RISC-V |                Core                 | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     |       Zigbee       |                           Additional                           |
-|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|:------:|:-----------------------------------:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------------------:|:--------------------------------------------------------------:|
-|       EPS32       |                                                     [тык `Series`](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf")                                                      |                                    [Series: page 29](./datasheets/esp32_datasheet_en.pdf "page 29")                                     | False  | Xtensa® 32-bit LX6 dual/single core |   up to 240    |   520    |   448   | 2.4 GHz |  Bluetooth v4.2  |       False        |                      Много разных модулей                      |
-|        S3         |                                                      [тык `S3`](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)                                                       |                                     [S3: page 59](./datasheets/esp32-s3_datasheet_en.pdf "page 59")                                     | False  |    Xtensa® 32-bit LX7 Dual-core     |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        | Vector instructions, <br/>connection to flash and external RAM |
-|        S2         |                                                      [тык `S2`](https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf)                                                       |                                     [S2: page 39](./datasheets/esp32-s2_datasheet_en.pdf "page 39")                                     | False  |   Xtensa® 32-bit LX7 Single-Core    |   up to 240    |   320    |   128   | 2.4 GHz |      False       |       False        |                  Ultra-low-power performance                   |
-|        C6         |                                                      [тык `C6`](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)                                                       |                                     [C6: page 57](./datasheets/esp32-c6_datasheet_en.pdf "page 57")                                     |  True  |  32-bit single-core microprocessor  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |        True        |                   Works with external flash                    |
-|  C3 (+ ESP8685)   | [тык `C3`](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)<br/> [тык `ESP8685`](https://www.espressif.com/sites/default/files/documentation/esp8685_datasheet_en.pdf) | [C3: page 47](./datasheets/esp32-c3_datasheet_en.pdf "page 47")<br/>[ESP8685: page 40](./datasheets/esp8685_datasheet_en.pdf "page 40") |  True  |  32-bit single-core microprocessor  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                   Allow connection to flash                    |
-| C2 (aka ESP8684)  |                                                    [тык `ESP8684`](https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf)                                                     |                                     [C2: page 27](./datasheets/esp8684_datasheet_en.pdf "page 27")                                      |  True  |  32-bit single-core microprocessor  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                      16 KB for cache SRAM                      |
-|        H2         |                                                      [тык `H2`](https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf)                                                       |                                     [H2: page 33](./datasheets/esp32-h2_datasheet_en.pdf "page 33")                                     |  True  |  32-bit single-core microprocessor  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) | True +<br/> Thread |                         4 KB LP Memory                         |
+| EPS32<br/>SoC Series |                                                                                                  Datasheet                                                                                                   |                                  Current Consumption <a href="#noteDS" id="noteDSRef"><sup>2</sup></a>                                  | RISC-V |                Core                 | Frequency, MHz | SRAM, KB | ROM, KB |  WiFi   |    Bluetooth     |       Zigbee       |                           Additional                           |
+|:--------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|:------:|:-----------------------------------:|:--------------:|:--------:|:-------:|:-------:|:----------------:|:------------------:|:--------------------------------------------------------------:|
+|        EPS32         |                                                     [тык `Series`](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf")                                                      |                                    [Series: page 29](./datasheets/esp32_datasheet_en.pdf "page 29")                                     | False  | Xtensa® 32-bit LX6 dual/single core |   up to 240    |   520    |   448   | 2.4 GHz |  Bluetooth v4.2  |       False        |                      Много разных модулей                      |
+|          S3          |                                                      [тык `S3`](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)                                                       |                                     [S3: page 59](./datasheets/esp32-s3_datasheet_en.pdf "page 59")                                     | False  |    Xtensa® 32-bit LX7 Dual-core     |   up to 240    |   512    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        | Vector instructions, <br/>connection to flash and external RAM |
+|          S2          |                                                      [тык `S2`](https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf)                                                       |                                     [S2: page 39](./datasheets/esp32-s2_datasheet_en.pdf "page 39")                                     | False  |   Xtensa® 32-bit LX7 Single-Core    |   up to 240    |   320    |   128   | 2.4 GHz |      False       |       False        |                  Ultra-low-power performance                   |
+|          C6          |                                                      [тык `C6`](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)                                                       |                                     [C6: page 57](./datasheets/esp32-c6_datasheet_en.pdf "page 57")                                     |  True  |  32-bit single-core microprocessor  |   up to 160    |   512    |   320   | 2.4 GHz | Bluetooth 5 (LE) |        True        |                   Works with external flash                    |
+|    C3 (+ ESP8685)    | [тык `C3`](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)<br/> [тык `ESP8685`](https://www.espressif.com/sites/default/files/documentation/esp8685_datasheet_en.pdf) | [C3: page 47](./datasheets/esp32-c3_datasheet_en.pdf "page 47")<br/>[ESP8685: page 40](./datasheets/esp8685_datasheet_en.pdf "page 40") |  True  |  32-bit single-core microprocessor  |   up to 160    |   400    |   384   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                   Allow connection to flash                    |
+|   C2 (aka ESP8684)   |                                                    [тык `ESP8684`](https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf)                                                     |                                     [C2: page 27](./datasheets/esp8684_datasheet_en.pdf "page 27")                                      |  True  |  32-bit single-core microprocessor  |   up to 120    |   272    |   576   | 2.4 GHz | Bluetooth 5 (LE) |       False        |                      16 KB for cache SRAM                      |
+|          H2          |                                                      [тык `H2`](https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf)                                                       |                                     [H2: page 33](./datasheets/esp32-h2_datasheet_en.pdf "page 33")                                     |  True  |  32-bit single-core microprocessor  |    up to 96    |   320    |   128   |  False  | Bluetooth 5 (LE) | True +<br/> Thread |                         4 KB LP Memory                         |
 
 <a id="how" href="#howRef"><sup><u>0</u></sup></a> [Helped by Benjamin Loison](https://translated.turbopages.org/proxy_u/en-ru.ru.78954326-66106b9c-92c2ed9b-74722d776562/https/stackoverflow.com/questions/25579868/how-to-add-footnotes-to-github-flavoured-markdown?__ya_mt_enable_static_translations=1)
 
@@ -159,6 +159,76 @@ RISC-V - команды проще, короче, быстрее в выполн
 -
 
 
+
+---
+
+Light ON<a href="#led" id="ledRef"><sup>1</sup></a>
+=
+
+Светодиодная (адресная) лента (aka NeoPixel)
+-
+
+<a id="gyver" href="https://alexgyver.ru/ws2812_guide/"><u>AlexGyver</u></a>
+&nbsp;
+[1](https://habr.com/ru/companies/samsung/articles/696508/)
+&nbsp;
+[2](https://роботехника18.рф/ws2812b-ардуино//)
+
+Сущность: RGB-светодиод<a href="#diod" id="diodRef"><sup>1</sup></a>, цвет которого можно назначать программно <br/>
+(с помощью микросхемы, которая определяет протокол взаимодействия с ним). Буквально, это физический пиксель из экрана монитора.
+
+<br/>
+
+Params:
+- Black PCB / White PCB — цвет подложки ленты, чёрная / белая
+- 1m/5m — длина ленты в метрах
+- 30/60/74/96/100/144 — количество светодиодов на 1 метр ленты
+- IPXX – влагозащита
+  - IP30 лента без влагозащиты
+  - IP65 лента покрыта силиконом
+  - IP67 лента полностью в силиконовом коробе
+- ECO – “экономная” версия ленты, менее качественная и яркая чем обычная <a id="istok" href="#gyver"><sup>AlexGyver</sup></a>
+
+|  Чип   | Напряжение | Чип рулит N светодиод(-ами) | Количество пинов | Потребление тока<br/>диодом (max),mA |                                           Datasheet                                           | Размер данных <br/> на светодиод |
+|:------:|:----------:|:---------------------------:|:----------------:|:------------------------------------:|:---------------------------------------------------------------------------------------------:|:--------------------------------:|
+| WS2811 |   12-24V   |              3              |        8         |                  36                  |      [тык](https://www.promelec.ru/fs/sources/e0/8f/cc/d5/f981f4b46c6d47331add022d.pdf)       |                24                |
+| WS2812 |  3.5-5.3V  |              1              |        4         |                  36                  |      [тык](https://www.promelec.ru/fs/sources/3c/92/4c/24/0c87281f8c01c76cb3d650ec.pdf)       |                24                |
+| WS2813 |  3.5-5.3V  |              1              |        6         |                  36                  | [тык](https://sunliteleds.com/wp-content/uploads/2023/07/WS2813-IC-Datasheet-SuntechLite.pdf) |                24                |
+| WS2815 |  9-13.5V   |              1              |        6         |                  36                  |      [тык](https://www.promelec.ru/fs/sources/68/4c/1a/a9/4ba343a000934b970d976e79.pdf)       |                24                |
+| WS2818 |   12/24V   |              3              |        8         |                  36                  |        [тык](https://www.tme.eu/Document/22185e725bbf20b943bde01e7736a97b/WS2818.pdf)         |                24                |
+
+
+<a href="#ledRef" id="led"><sup>0</sup></a> LED (Light Emitting Diode)
+
+<a href="#diodRef" id="diod"><sup>2</sup></a> В этом разделе `диод`== `адресный RGB-светодиод`
+
+Power Management
+-
+
+[1](https://apeyronled.ru/articles/kak-podklyuchit-lentu-12v-24v-k-bp/)
+&nbsp;
+[2](https://blog.fenix.help/zalipatelnaya-nauka/opredeleniye-fazy-i-nolya-v-elektrotekhnike)
+&nbsp;
+[3](https://cable.ru/articles/2090-opasno--kak-ne-nado-delat-zazemlenie)
+
+**Фаза, ноль и земля**
+
+От трансформаторной подстанции на подъездный электрощит многоквартирного дома поступает три фазы, напряжение между парами которых равно 220 В. 
+Также к земле трансформаторной подстанции подключён (условный) нуль(N). Нуль передает ток обратно в трансформатор 
+(закольцовывает движение электрической энергии) и не всегда равен 0 В (для этого нужно, чтобы напряжение на всех линиях фазы было равно
+(из-за схемы получения трех фаз в трансформаторе)). Напряжение фаз относительно нуля тоже равно 220 В.
+Для создания действительного нуля (провода с нулевым потенциалом) применяется так называемое защитное заземление (земля), которое обозначается PE.
+
+<kbd>
+<img src="./img/LLN.png" alt="alt text" title="image Title" width="450"/>
+</kbd>
+
+Проводник PE гальванически соединён с N, при прозвонке тестером обнаружится, что присутствует электрический контакт (протекает ток).
+Сочетание фазы и N нужно, чтобы была возможность обнаружить пробой (накопление потенциала на корпусе оборудования), который может привести к 
+поражению человека, прикоснувшегося к оборудованию, и поломке оборудования. В случае пробоя срабатывает УЗО (управляющее защитное устройство), которое отводит
+напряжение на землю. Потребители сети нельзя подключать к земле, потому что тогда случится пробой.
+
+<img src="./img/toGND_toN.png" alt="alt text" title="image Title" width="450"/>
 
 ---
 
