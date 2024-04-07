@@ -2,7 +2,7 @@ Rules
 =
 
 * Каждый раздел, не связанный на прямую с пониманием работы с SoC, переносится на соответствующую ему ветку. 
-* Поcле приведения ветки в (около-) завершенный вид, ветка вливается в main через [git rebase main; git push origin main -force](https://git-scm.com/docs/git-rebase)
+* Поcле приведения ветки в (около-) завершенный вид, ветка вливается в main через [git rebase main; git push origin main](https://git-scm.com/docs/git-rebase)
 
 ---
 
