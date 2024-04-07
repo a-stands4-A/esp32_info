@@ -240,4 +240,23 @@ Power Management
 
 ---
 
+Master-Slave Bluetooth
+=
+
+[1](https://ok1tk.com/two-way-serial-bluetooth-communication-between-two-esp32-boards/)
+ &nbsp; 
+[2](`https://www.electrosoftcloud.com/en/esp32-getting-started-with-bluetooth/)
+ &nbsp; 
+[3](https://microsin.net/programming/arm/esp32-bluetooth-architecture.html)
+ &nbsp; 
+[ble](https://www.electronicshub.org/esp32-ble-tutorial/)
+ &nbsp; 
+[4](https://habr.com/ru/companies/first/articles/596741/)
+ &nbsp; 
+
+
+Классический Bluetooth работает 1:1, для остальных нужно BLE.
+
+---
+
 
