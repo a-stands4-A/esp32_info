@@ -1,3 +1,11 @@
+Rules
+=
+
+* Каждый раздел, не связанный на прямую с пониманием работы с SoC, переносится на соответствующую ему ветку. 
+* Поcле приведения ветки в (около-) завершенный вид, ветка вливается в main через [git rebase main; git push origin main -force](https://git-scm.com/docs/git-rebase)
+
+---
+
 SoC - мозги и сердце IoT
 -
 [1](https://auroraevernet.ru/articles/soc-sistema-na-kristalle-ustrojstvo-osobennosti-otlichie-ot-cpu/)
@@ -136,7 +144,7 @@ ESP - аналог Arduino, Raspberry Pico
 
 <a id="how" href="#howRef"><sup><u>0</u></sup></a> [Helped by Benjamin Loison](https://translated.turbopages.org/proxy_u/en-ru.ru.78954326-66106b9c-92c2ed9b-74722d776562/https/stackoverflow.com/questions/25579868/how-to-add-footnotes-to-github-flavoured-markdown?__ya_mt_enable_static_translations=1)
 
-<a id="sell" href="#sellRef"><sup>1</sup></a> Basic ESP32 (ESP32-WROOM) + QSPI PSRAM (need additional code) = ESP32-WROVER (pumped-up ESP32-WROOM)
+<a id="sell" href="#sellRef"><sup>1</sup></a> Basic ESP32 (ESP32-WROOM) + QSPI PSRAM (additional code required) = ESP32-WROVER (pumped-up ESP32-WROOM)
 
 <a id="noteDS" href="#noteDSRef"><sup>2</sup></a> Datasheet`ы взяты с инета, для подстраховки загружены PDF файлы с указанием страницы
 
